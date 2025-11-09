@@ -1,0 +1,48 @@
+{
+  "name": "tag-checker",
+  "version": "1.0.0",
+  "description": "A TypeScript solution for checking proper HTML tag nesting and matching",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "build:dev": "tsc --project tsconfig.build.json && tsc-alias",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "dev": "ts-node -r tsconfig-paths/register src/index.ts",
+    "dev:interactive": "ts-node -r tsconfig-paths/register src/index.ts --interactive",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx}\"",
+    "clean": "rm -rf dist .coverage"
+  },
+  "keywords": [
+    "tag-checker",
+    "html",
+    "parser"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "esbuild": "^0.25.12",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "jest": "^29.5.0",
+    "prettier": "^3.6.2",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.0",
+    "tsc-alias": "^1.8.16",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.46.3"
+  },
+  "dependencies": {
+    "tslib": "^2.8.1"
+  }
+}
